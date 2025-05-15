@@ -5,10 +5,9 @@ $result = "Even";
 if ($num % 2 != 0) {
     $result = "Odd";
 }
-echo "The number is: {$result}";
+echo "The number is: {$result}\n\n";
 
 function isPrimeNumber($number) {
-
     if ($number < 2) {
         return "{$number} is NOT Prime\n";
     }
@@ -27,7 +26,6 @@ function isPrimeNumber($number) {
             return "{$number} is NOT Prime\n";
         }
     }
-
     return "{$number} is Prime\n";
 }
 
@@ -40,6 +38,7 @@ $number = (int)$number;
 for($ctr=0; $ctr<=$number; $ctr++) {
     echo isPrimeNumber($ctr);
 }
+echo "\n";
 
 require __DIR__ . "/vendor/autoload.php";
 
@@ -54,3 +53,4 @@ echo $uuid->toString() . "\n";
 $faker = Faker\Factory::create();
 echo $faker->name() . "\n";
 echo $faker->email() . "\n";
+echo $faker->text() . "\n";
